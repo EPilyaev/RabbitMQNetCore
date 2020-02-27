@@ -24,26 +24,30 @@ namespace Worker
             Console.WriteLine(" [*] Waiting for messages.");
 
             var consumer = new EventingBasicConsumer(channel);
-            consumer.Received += (model, ea) =>
-            {
-                var body = ea.Body;
-                var message = Encoding.UTF8.GetString(body);
-                Console.WriteLine(" [x] Received {0}", message);
-
-                int dots = message.Split('.').Length - 1;
-                Thread.Sleep(dots * 1000);
-
-                Console.WriteLine(" [x] Done");
-
-                channel.BasicAck(ea.DeliveryTag, false);
-            };
-            
-            channel.BasicConsume("task_queue",
-                false,
-                consumer);
+            consumer.Received += OnReceived;
+            channel.BasicConsume("task_queue", false, consumer);
 
             Console.WriteLine(" Press [enter] to exit.");
             Console.ReadLine();
+            
+            
+            void OnReceived(object model, BasicDeliverEventArgs ea)
+            {
+                var body = ea.Body;
+                var message = Encoding.UTF8.GetString(body);
+                
+                Console.WriteLine(" [x] Received {0}", message);
+                DoHardWork(message);
+                Console.WriteLine(" [x] Done");
+
+                channel.BasicAck(ea.DeliveryTag, false);
+            }
+        }
+
+        private static void DoHardWork(string message)
+        {
+            int dots = message.Split('.').Length - 1;
+            Thread.Sleep(dots * 1000);
         }
     }
 }
