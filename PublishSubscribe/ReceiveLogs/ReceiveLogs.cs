@@ -5,6 +5,7 @@ using RabbitMQ.Client.Events;
 
 namespace ReceiveLogs
 {
+    // ReSharper disable once ClassNeverInstantiated.Global
     class ReceiveLogs
     {
         public static void Main()
@@ -15,9 +16,7 @@ namespace ReceiveLogs
             channel.ExchangeDeclare("logs", ExchangeType.Fanout);
 
             var queueName = channel.QueueDeclare().QueueName;
-            channel.QueueBind(queueName,
-                "logs",
-                "");
+            channel.QueueBind(queueName, "logs", "");
 
             Console.WriteLine(" [*] Waiting for logs.");
 
@@ -28,9 +27,8 @@ namespace ReceiveLogs
                 var message = Encoding.UTF8.GetString(body);
                 Console.WriteLine(" [x] {0}", message);
             };
-            channel.BasicConsume(queueName,
-                true,
-                consumer);
+            
+            channel.BasicConsume(queueName, true, consumer);
 
             Console.WriteLine(" Press [enter] to exit.");
             Console.ReadLine();
