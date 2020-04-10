@@ -17,8 +17,8 @@ namespace RPCClient
         private readonly string _replyQueueName;
         private readonly EventingBasicConsumer _consumer;
 
-        private readonly ConcurrentDictionary<string, TaskCompletionSource<string>> _callbackMapper =
-            new ConcurrentDictionary<string, TaskCompletionSource<string>>();
+        private readonly ConcurrentDictionary<string, TaskCompletionSource<string>> 
+            _callbackMapper = new ConcurrentDictionary<string, TaskCompletionSource<string>>();
 
         public RpcClient()
         {
@@ -27,48 +27,46 @@ namespace RPCClient
             _connection = factory.CreateConnection();
             _channel = _connection.CreateModel();
             _replyQueueName = _channel.QueueDeclare().QueueName;
-            
-            //Change to async consuming, remove mapper
+
             _consumer = new EventingBasicConsumer(_channel);
-            
-            _consumer.Received += (model, ea) =>
-            {
-                if (!_callbackMapper.TryRemove(ea.BasicProperties.CorrelationId, out TaskCompletionSource<string> tcs))
-                    return;
-                var body = ea.Body;
-                var response = Encoding.UTF8.GetString(body);
-                tcs.TrySetResult(response);
-            };
+            _consumer.Received += OnReceived;
         }
 
-        public Task<string> CallAsync(string message, CancellationToken cancellationToken = default)
+        public Task<string> CallAsync(string message,
+                        CancellationToken cancellationToken = default)
         {
-            IBasicProperties props = _channel.CreateBasicProperties();
             var correlationId = Guid.NewGuid().ToString();
-            props.CorrelationId = correlationId;
-            props.ReplyTo = _replyQueueName;
-            var messageBytes = Encoding.UTF8.GetBytes(message);
             var tcs = new TaskCompletionSource<string>();
             _callbackMapper.TryAdd(correlationId, tcs);
+            
+            var props = _channel.CreateBasicProperties();
+            props.CorrelationId = correlationId;
+            props.ReplyTo = _replyQueueName;
+            
+            var messageBytes = Encoding.UTF8.GetBytes(message);
+            _channel.BasicPublish("", 
+                QueueName, props, messageBytes);
+            _channel.BasicConsume(consumer: _consumer, 
+                queue: _replyQueueName, autoAck: true);
 
-            _channel.BasicPublish(
-                "",
-                QueueName,
-                props,
-                messageBytes);
-
-            _channel.BasicConsume(
-                consumer: _consumer,
-                queue: _replyQueueName,
-                autoAck: true);
-
-            cancellationToken.Register(() => _callbackMapper.TryRemove(correlationId, out var tmp));
+            cancellationToken.Register(() => 
+                _callbackMapper.TryRemove(correlationId, out _));
             return tcs.Task;
         }
 
-        public void Close()
+        public void Close() => _connection.Close();
+
+        private void OnReceived(object model, BasicDeliverEventArgs ea)
         {
-            _connection.Close();
+            var suchTaskExists =
+                _callbackMapper.TryRemove(ea.BasicProperties.CorrelationId, 
+                                    out var tcs);
+            
+            if (!suchTaskExists) return;
+            
+            var body = ea.Body;
+            var response = Encoding.UTF8.GetString(body);
+            tcs.TrySetResult(response);
         }
     }
 }
