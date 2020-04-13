@@ -23,8 +23,8 @@ namespace PublisherConfirms
             for (var i = 0; i < PublisherConfirms.MessageCount; i++)
             {
                 var body = Encoding.UTF8.GetBytes(i.ToString());
-                channel.BasicPublish(exchange: "", routingKey: queueName,
-                                       basicProperties: null, body: body);
+                channel.BasicPublish("", queueName,
+                                       null, body);
                 outstandingMessageCount++;
 
                 if (outstandingMessageCount != batchSize) continue;
