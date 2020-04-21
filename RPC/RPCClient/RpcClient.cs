@@ -35,6 +35,8 @@ namespace RPCClient
         public Task<string> CallAsync(string message,
                         CancellationToken cancellationToken = default)
         {
+            Console.WriteLine(" [x] Requesting fib({0})", message);
+            
             var correlationId = Guid.NewGuid().ToString();
             var tcs = new TaskCompletionSource<string>();
             _callbackMapper.TryAdd(correlationId, tcs);
@@ -66,7 +68,10 @@ namespace RPCClient
             
             var body = ea.Body;
             var response = Encoding.UTF8.GetString(body);
+
             tcs.TrySetResult(response);
+            
+            Console.WriteLine(" [.] Got '{0}'", response);
         }
     }
 }
