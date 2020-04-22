@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPCServer", "RPCServer\RPCS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{95ADA34C-218A-4F89-A2B9-F088E198486D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiClient", "WebApiClient\WebApiClient.csproj", "{6519380A-2689-4AC8-A2CE-969CFE5C6CE6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{95ADA34C-218A-4F89-A2B9-F088E198486D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95ADA34C-218A-4F89-A2B9-F088E198486D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95ADA34C-218A-4F89-A2B9-F088E198486D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6519380A-2689-4AC8-A2CE-969CFE5C6CE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6519380A-2689-4AC8-A2CE-969CFE5C6CE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6519380A-2689-4AC8-A2CE-969CFE5C6CE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6519380A-2689-4AC8-A2CE-969CFE5C6CE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
