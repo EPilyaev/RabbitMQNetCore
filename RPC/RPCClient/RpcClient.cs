@@ -46,10 +46,8 @@ namespace RPCClient
             props.ReplyTo = _replyQueueName;
             
             var messageBytes = Encoding.UTF8.GetBytes(message);
-            _channel.BasicPublish("", 
-                QueueName, props, messageBytes);
-            _channel.BasicConsume(consumer: _consumer, 
-                queue: _replyQueueName, autoAck: true);
+            _channel.BasicPublish("", QueueName, props, messageBytes);
+            _channel.BasicConsume(consumer: _consumer, queue: _replyQueueName, autoAck: true);
 
             cancellationToken.Register(() => 
                 _callbackMapper.TryRemove(correlationId, out _));
@@ -60,9 +58,8 @@ namespace RPCClient
 
         private void OnReceived(object model, BasicDeliverEventArgs ea)
         {
-            var suchTaskExists =
-                _callbackMapper.TryRemove(ea.BasicProperties.CorrelationId, 
-                                    out var tcs);
+            var suchTaskExists = _callbackMapper.TryRemove(ea.BasicProperties.CorrelationId, 
+                                                                    out var tcs);
             
             if (!suchTaskExists) return;
             

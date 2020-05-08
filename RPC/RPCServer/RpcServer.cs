@@ -22,8 +22,7 @@ namespace RPCServer
             using var connection = factory.CreateConnection();
             _channel = connection.CreateModel();
 
-            _channel.QueueDeclare("rpc_queue", false, false, 
-                                            false, null);
+            _channel.QueueDeclare("rpc_queue", false, false, false, null);
             _channel.BasicQos(0, 1, false);
 
             var consumer = new AsyncEventingBasicConsumer(_channel);
@@ -61,8 +60,7 @@ namespace RPCServer
             {
                 var responseBytes = Encoding.UTF8.GetBytes(response);
                 
-                _channel.BasicPublish("", props.ReplyTo,
-                                            replyProps, responseBytes);
+                _channel.BasicPublish("", props.ReplyTo, replyProps, responseBytes);
                 _channel.BasicAck(ea.DeliveryTag, false);
             }
         }
