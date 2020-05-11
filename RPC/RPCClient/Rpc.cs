@@ -11,6 +11,7 @@ namespace RPCClient
         {
             Console.WriteLine("RPC Client");
             string n = args.Length > 0 ? args[0] : "30";
+            int requests = args.Length > 1 ? int.Parse(args[1]) : 40;
 
             var rpcClient = new RpcClient();
             
@@ -19,7 +20,7 @@ namespace RPCClient
             var timer = new Stopwatch();
             timer.Start();
             
-            for (var i = 0; i < 40; i++)
+            for (var i = 0; i < requests; i++)
             {
                 var callTask =  rpcClient.CallAsync(n);
                 callTaskList.Add(callTask);
@@ -28,7 +29,7 @@ namespace RPCClient
             await Task.WhenAll(callTaskList);
             
             timer.Stop();
-            Console.WriteLine($"Finished 40 Tasks where n={n}\n" +
+            Console.WriteLine($"Finished {requests} Tasks where n={n}\n" +
                               $"Elapsed: {timer.ElapsedMilliseconds:# ###} ms");
             
             rpcClient.Close();

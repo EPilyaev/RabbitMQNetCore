@@ -9,19 +9,20 @@ namespace WebApiClient
     class Program
     {
         
-        static HttpClient _client = new HttpClient();
+        static HttpClient _client = new HttpClient(){Timeout = TimeSpan.FromSeconds(600)};
         
         static async Task Main(string[] args)
         { 
             Console.WriteLine("WebApi Client");
             string n = args.Length > 0 ? args[0] : "30";
+            int requests = args.Length > 1 ? int.Parse(args[1]) : 40;
             
             var callTaskList = new List<Task>();
             
             var timer = new Stopwatch();
             timer.Start();
             
-            for (var i = 0; i < 40; i++)
+            for (var i = 0; i < requests; i++)
             {
                 var callTask =  CallFibAsync(n);
                 callTaskList.Add(callTask);
@@ -30,7 +31,7 @@ namespace WebApiClient
             await Task.WhenAll(callTaskList);
             
             timer.Stop();
-            Console.WriteLine($"Finished 40 Tasks where n={n}\n" +
+            Console.WriteLine($"Finished {requests} Tasks where n={n}\n" +
                               $"Elapsed: {timer.ElapsedMilliseconds:# ###} ms");
             
 

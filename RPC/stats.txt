@@ -1,0 +1,71 @@
+6 cores/6 threads 
+
+RPC_RMQ
+
+Finished 40 Tasks where n=42
+Elapsed: 29 629 ms
+
+Finished 40 Tasks where n=42
+Elapsed: 31 153 ms
+
+Finished 40 Tasks where n=42
+Elapsed: 29 308 ms
+
+
+
+Finished 250 Tasks where n=35
+Elapsed: 6 906 ms
+
+Finished 250 Tasks where n=35
+Elapsed: 7 233 ms
+
+Finished 250 Tasks where n=35
+Elapsed: 7 120 ms
+
+
+
+Finished 1500 Tasks where n=35
+Elapsed: 40 569 ms
+
+Finished 1500 Tasks where n=35
+Elapsed: 40 639 ms
+
+Finished 1500 Tasks where n=35
+Elapsed: 41 198 ms
+
+
+
+Web API
+
+Finished 40 Tasks where n=42
+Elapsed: 30 181 ms
+
+Finished 40 Tasks where n=42
+Elapsed: 28 259 ms
+
+Finished 40 Tasks where n=42
+Elapsed: 30 102 ms
+
+
+
+Finished 250 Tasks where n=35
+Elapsed: 6 768 ms
+
+Finished 250 Tasks where n=35
+Elapsed: 6 132 ms
+ Press [enter] to exit.
+
+Finished 250 Tasks where n=35
+Elapsed: 6 616 ms
+ Press [enter] to exit.
+
+
+
+1500/35 1000/35
+Unhandled exception. System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: The response ended prematurely.
+
+
+
+Finished 750 Tasks where n=35
+Elapsed: 18 284 ms
