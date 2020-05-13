@@ -43,7 +43,11 @@
     <option name="showStatusBarWidget" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7b1bd59-73d6-412f-b556-d0bf9acb01d8" name="Default Changelist" comment="Code and stats" />
+    <list default="true" id="b7b1bd59-73d6-412f-b556-d0bf9acb01d8" name="Default Changelist" comment="Code and stats">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RPC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RPC/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPCServer/RpcServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RPCServer/RpcServer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stats.txt" beforeDir="false" afterPath="$PROJECT_DIR$/stats.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,22 +57,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/WebApi/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApiClient/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApi/Startup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/RPCServer/RpcServer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApi/Controllers/FibController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/RPCClient/RpcClient.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/RPCClient/Rpc.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApi/Controllers/FibController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RPCServer/RpcServer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApiClient/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApi/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApi/Program.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/RPCClient/RpcClient.cs" />
-        <option value="$PROJECT_DIR$/RPCServer/RpcServer.cs" />
         <option value="$PROJECT_DIR$/RPCClient/Rpc.cs" />
         <option value="$PROJECT_DIR$/WebApiClient/Program.cs" />
+        <option value="$PROJECT_DIR$/RPCServer/RpcServer.cs" />
       </list>
     </option>
   </component>
@@ -86,7 +89,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
-  <component name="RunManager" selected=".NET Project.WebApiClient(35 - 1500)">
+  <component name="RunManager" selected=".NET Project.WebApiClient(42 - 40)">
     <configuration name="RPCClient (35 - 250)" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/RPCClient/bin/Debug/netcoreapp3.1/RPCClient.dll" />
       <option name="PROGRAM_PARAMETERS" value="35 250" />
@@ -314,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589213451449</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="remove .idea from gitignore">
+      <created>1589400464156</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1589400464156</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,29 +346,30 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Review RMQ RPC code" />
     <MESSAGE value="Code and stats" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code and stats" />
+    <MESSAGE value="remove .idea from gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove .idea from gitignore" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589197366064">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="414" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589197366064" />
-    <state width="1877" height="363" key="GridCell.Tab.0.bottom" timestamp="1589356693566">
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1589401412631">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589356693566" />
-    <state width="1877" height="363" key="GridCell.Tab.0.center" timestamp="1589356693566">
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589401412631" />
+    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1589401412631">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589356693566" />
-    <state width="1877" height="363" key="GridCell.Tab.0.left" timestamp="1589356693566">
+    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589401412631" />
+    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1589401412631">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589356693566" />
-    <state width="1877" height="363" key="GridCell.Tab.0.right" timestamp="1589356693566">
+    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589401412631" />
+    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1589401412631">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589356693566" />
+    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589401412631" />
     <state width="1877" height="363" key="GridCell.Tab.1.bottom" timestamp="1589356693567">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

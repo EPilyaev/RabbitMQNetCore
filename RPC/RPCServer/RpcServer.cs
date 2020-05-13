@@ -48,7 +48,7 @@ namespace RPCServer
             {
                 var message = Encoding.UTF8.GetString(body);
                 var n = int.Parse(message);
-                Console.WriteLine(" [.] fib({0})", message);
+                //Console.WriteLine(" [.] fib({0})", message);
                 response = await Task.Run(() => Fib(n).ToString());
             }
             catch (Exception e)

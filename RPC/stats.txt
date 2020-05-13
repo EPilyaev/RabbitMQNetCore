@@ -69,3 +69,26 @@ Unhandled exception. System.Net.Http.HttpRequestException: An error occurred whi
 
 Finished 750 Tasks where n=35
 Elapsed: 18 284 ms
+
+
+4 cores / 8 threads
+
+4 RPC servers ~ 80% CPU load
+Finished 40 Tasks where n=42
+Elapsed: 55 506 ms
+
+6 RPC Servers 100% CPU load
+Finished 40 Tasks where n=42
+Elapsed: 47 658 ms
+
+8 RPC Servers 
+Finished 40 Tasks where n=42
+Elapsed: 42 597 ms
+
+Web API = 100% CPU load
+Finished 40 Tasks where n=42
+Elapsed: 43 376 ms
+
+Finished 40 Tasks where n=42
+Elapsed: 42 191 ms
+
