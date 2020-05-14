@@ -3,72 +3,34 @@
 RPC_RMQ
 
 Finished 40 Tasks where n=42
-Elapsed: 29 629 ms
 
-Finished 40 Tasks where n=42
-Elapsed: 31 153 ms
+4 RPC Servers 100% CPU usage
+Elapsed: 37 853 ms
+Elapsed: 38 051 ms
+Elapsed: 37 472 ms
 
-Finished 40 Tasks where n=42
+6 RPC Servers
+Elapsed: 29 997 ms
 Elapsed: 29 308 ms
+Elapsed: 29 509 ms
 
-
-
-Finished 250 Tasks where n=35
-Elapsed: 6 906 ms
-
-Finished 250 Tasks where n=35
-Elapsed: 7 233 ms
-
-Finished 250 Tasks where n=35
-Elapsed: 7 120 ms
-
-
-
-Finished 1500 Tasks where n=35
-Elapsed: 40 569 ms
-
-Finished 1500 Tasks where n=35
-Elapsed: 40 639 ms
-
-Finished 1500 Tasks where n=35
-Elapsed: 41 198 ms
-
+8 RPC Servers
+Elapsed: 29 922 ms
+Elapsed: 29 132 ms
+Elapsed: 30 231 ms
 
 
 Web API
-
-Finished 40 Tasks where n=42
-Elapsed: 30 181 ms
-
-Finished 40 Tasks where n=42
-Elapsed: 28 259 ms
-
-Finished 40 Tasks where n=42
-Elapsed: 30 102 ms
+Elapsed: 29 664 ms
+Elapsed: 29 708 ms
+Elapsed: 27 729 ms
+Elapsed: 27 983 ms
+Elapsed: 28 466 ms
 
 
 
-Finished 250 Tasks where n=35
-Elapsed: 6 768 ms
-
-Finished 250 Tasks where n=35
-Elapsed: 6 132 ms
- Press [enter] to exit.
-
-Finished 250 Tasks where n=35
-Elapsed: 6 616 ms
- Press [enter] to exit.
 
 
-
-1500/35 1000/35
-Unhandled exception. System.Net.Http.HttpRequestException: An error occurred while sending the request.
- ---> System.IO.IOException: The response ended prematurely.
-
-
-
-Finished 750 Tasks where n=35
-Elapsed: 18 284 ms
 
 
 4 cores / 8 threads
