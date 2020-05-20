@@ -60,3 +60,32 @@ Elapsed: 42 191 ms
 Elapsed: 43 064 ms
 Elapsed: 42 159 ms
 Elapsed: 42 340 ms
+
+
+8 cores / 16 threads
+
+8 RPC servers ~ 70% CPU load
+Elapsed: 30 252 ms
+Elapsed: 29 842 ms
+Elapsed: 29 708 ms
+
+12 RPC servers ~ 95% CPU load
+Elapsed: 29 768 ms
+Elapsed: 29 617 ms
+Elapsed: 29 657 ms
+Elapsed: 29 445 ms
+
+16 RPC servers
+Elapsed: 25 638 ms
+Elapsed: 25 546 ms
+Elapsed: 25 693 ms
+
+20 RPC servers
+Elapsed: 25 397 ms
+Elapsed: 24 873 ms
+Elapsed: 25 357 ms
+
+Web API
+Elapsed: 25 870 ms
+Elapsed: 25 554 ms
+Elapsed: 26 044 ms
