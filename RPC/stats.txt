@@ -9,16 +9,21 @@ Elapsed: 37 853 ms
 Elapsed: 38 051 ms
 Elapsed: 37 472 ms
 
+Average: 37 792
+
 6 RPC Servers
 Elapsed: 29 997 ms
 Elapsed: 29 308 ms
 Elapsed: 29 509 ms
+
+Av: 29 605
 
 8 RPC Servers
 Elapsed: 29 922 ms
 Elapsed: 29 132 ms
 Elapsed: 30 231 ms
 
+Av: 29 762
 
 Web API
 Elapsed: 29 664 ms

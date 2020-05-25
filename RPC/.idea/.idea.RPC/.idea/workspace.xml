@@ -45,7 +45,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b7b1bd59-73d6-412f-b556-d0bf9acb01d8" name="Default Changelist" comment="Code and stats">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RPC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RPC/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stats.txt" beforeDir="false" afterPath="$PROJECT_DIR$/stats.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,13 +55,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/WebApi/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApiClient/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApi/Startup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/RPCServer/RpcServer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApi/Controllers/FibController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/RPCClient/RpcClient.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/RPCClient/Rpc.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApi/Controllers/FibController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RPCServer/RpcServer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApiClient/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApi/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApi/Program.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -87,6 +86,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RunManager" selected=".NET Project.WebApiClient(42 - 40)">
     <configuration name="RPCClient (35 - 250)" type="DotNetProject" factoryName=".NET Project">
@@ -323,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589400464156</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="get more stats">
+      <created>1589905021123</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1589905021123</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,29 +353,34 @@
     <MESSAGE value="Review RMQ RPC code" />
     <MESSAGE value="Code and stats" />
     <MESSAGE value="remove .idea from gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove .idea from gitignore" />
+    <MESSAGE value="get more stats" />
+    <option name="LAST_COMMIT_MESSAGE" value="get more stats" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589197366064">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="414" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589197366064" />
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1589470514956">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1590000430461">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589470514956" />
-    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1589470514955">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1590000430461" />
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589904906889" />
+    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1590000430461">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589470514955" />
-    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1589470514955">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1590000430461" />
+    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589904906888" />
+    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1590000430460">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589470514955" />
-    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1589470514955">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1590000430460" />
+    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589904906887" />
+    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1590000430461">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589470514955" />
+    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1590000430461" />
+    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589904906888" />
     <state width="1877" height="363" key="GridCell.Tab.1.bottom" timestamp="1589356693567">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -433,9 +445,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="363" key="GridCell.Tab.4.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589356693567" />
-    <state x="552" y="272" key="Vcs.Push.Dialog.v2" timestamp="1589213453080">
+    <state x="552" y="272" key="Vcs.Push.Dialog.v2" timestamp="1589905022957">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="272" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589213453080" />
+    <state x="552" y="272" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1589905022957" />
   </component>
 </project>
